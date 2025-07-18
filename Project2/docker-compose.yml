@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web1:
+    image: my-nginx-container
+    ports:
+      - "8081:80"
+  web2:
+    image: my-nginx-container
+    ports:
+      - "8082:80"
+  web3:
+    image: my-nginx-container
+    ports:
+      - "8083:80"
+  web4:
+    image: my-nginx-container
+    ports:
+      - "8084:80"
+  web5:
+    image: my-nginx-container
+    ports:
+      - "8085:80"
