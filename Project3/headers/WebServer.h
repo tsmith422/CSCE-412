@@ -11,11 +11,13 @@ public:
     void assignRequest(Request request);
     void tick();
     Request getCurrRequest();
+    int getProcessedRequestCount();
 
 private:
     bool running;
     int time_remaining;
     Request curr_request;
+    int processed_count;
 };
 
 #endif

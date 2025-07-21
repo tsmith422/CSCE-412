@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <cstdlib>
 #include <ctime>
 #include "../headers/LoadBalancer.h"
@@ -29,12 +30,18 @@ int main()
 
     cout << "\nInitial queue of " << initial_queue_size << " requests created.\n";
     cout << "Starting simulation for " << total_cycles << " cycles...\n\n";
+    // Open log file in ../docs folder
+    ofstream logfile("docs/simulation_log.txt");
+    if (!logfile)
+    {
+        cerr << "Error opening log file.\n";
+        return 1;
+    }
 
-    lb.simulate(total_cycles, new_request_chance);
+    lb.simulate(total_cycles, new_request_chance, logfile);
 
-    cout << "\nSimulation complete.\n";
-    cout << "Final Queue Size: " << lb.getQueueSize() << "\n";
-    cout << "Number of Servers: " << lb.getServerCount() << "\n";
+    cout << "Simulation complete. Log written to ../docs/simulation_log.txt\n";
+    logfile.close();
 
     return 0;
 }

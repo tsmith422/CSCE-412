@@ -1,7 +1,8 @@
 #include "../headers/WebServer.h"
 
 WebServer::WebServer()
-    : running(false), time_remaining(0), curr_request("", "", 0) {}
+    : running(false), time_remaining(0),
+      curr_request("", "", 0), processed_count(0) {}
 
 void WebServer::assignRequest(Request req)
 {
@@ -18,6 +19,7 @@ void WebServer::tick()
         if (time_remaining <= 0)
         {
             running = false;
+            processed_count++;
         }
     }
 }
@@ -30,4 +32,9 @@ bool WebServer::isRunning()
 Request WebServer::getCurrRequest()
 {
     return curr_request;
+}
+
+int WebServer::getProcessedRequestCount()
+{
+    return processed_count;
 }

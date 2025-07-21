@@ -44,9 +44,13 @@ void LoadBalancer::tick()
     time++;
 }
 
-void LoadBalancer::simulate(int total_cycles, int new_request_chance)
+void LoadBalancer::simulate(int total_cycles, int new_request_chance, ostream &logfile)
 {
-    for (int cycle = 0; cycle < total_cycles; ++cycle)
+    logfile << "Cycle | Queue Size | Busy Servers | Total Servers | Total Processed Requests\n";
+    logfile << "----------------------------------------------------------------------\n";
+
+    // Simulate with logging every 500 cycles
+    for (int cycle = 0; cycle <= total_cycles; ++cycle)
     {
         assignRequests();
         tick();
@@ -54,17 +58,21 @@ void LoadBalancer::simulate(int total_cycles, int new_request_chance)
         if ((rand() % 100) < new_request_chance)
         {
             addRequest(generateRandomRequest());
-            // cout << "New request added at cycle " << cycle << endl;
         }
 
         if (cycle % 500 == 0)
         {
-            cout << "Cycle: " << cycle
-                 << " | Queue Size: " << getQueueSize()
-                 << " | Active Servers: " << getServerCount()
-                 << endl;
+            logfile << cycle << " | "
+                    << getQueueSize() << " | "
+                    << getBusyServerCount() << " | "
+                    << getServerCount() << " | "
+                    << getTotalProcessedRequests() << "\n";
         }
     }
+
+    logfile << "\nSimulation complete.\n";
+    logfile << "Final Queue Size: " << getQueueSize() << "\n";
+    logfile << "Total Requests Processed: " << getTotalProcessedRequests() << "\n";
 }
 
 int LoadBalancer::getQueueSize()
@@ -75,4 +83,27 @@ int LoadBalancer::getQueueSize()
 int LoadBalancer::getServerCount()
 {
     return servers.size();
+}
+
+int LoadBalancer::getBusyServerCount()
+{
+    int busy_count = 0;
+    for (WebServer *server : servers)
+    {
+        if (server->isRunning())
+        {
+            busy_count++;
+        }
+    }
+    return busy_count;
+}
+
+int LoadBalancer::getTotalProcessedRequests()
+{
+    int total = 0;
+    for (WebServer *server : servers)
+    {
+        total += server->getProcessedRequestCount();
+    }
+    return total;
 }
