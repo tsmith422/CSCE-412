@@ -1,0 +1,138 @@
+\hypertarget{classWebServer}{}\doxysection{Web\+Server Class Reference}
+\label{classWebServer}\index{WebServer@{WebServer}}
+
+
+Represents a single web server that processes one request at a time.  
+
+
+
+
+{\ttfamily \#include $<$Web\+Server.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWebServer_ad053f4e1808a3c10c7522d0dbbbc031a}{Web\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classWebServer}{Web\+Server}} in an idle state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWebServer_af715d38be06f480d0432f86b260123ea}{is\+Running}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the server is currently processing a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWebServer_ab028db6acd1106e0c97dd3a9c5df02a2}{assign\+Request}} (\mbox{\hyperlink{structRequest}{Request}} request)
+\begin{DoxyCompactList}\small\item\em Assigns a request to the server for processing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWebServer_aa70cfd8749f4aee55c60e09a5f9211f7}{tick}} ()
+\begin{DoxyCompactList}\small\item\em Advances the server by one clock cycle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structRequest}{Request}} \mbox{\hyperlink{classWebServer_a16f30473362bfc933f00824da9958df4}{get\+Curr\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current request being processed by the server. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWebServer_a9111ed664a9aec764311ba275941c704}{get\+Processed\+Request\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total number of requests processed by this server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single web server that processes one request at a time. 
+
+The \mbox{\hyperlink{classWebServer}{Web\+Server}} class handles request assignment, processing time tracking, and counting the number of processed requests. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWebServer_ad053f4e1808a3c10c7522d0dbbbc031a}\label{classWebServer_ad053f4e1808a3c10c7522d0dbbbc031a}} 
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{WebServer()}{WebServer()}}
+{\footnotesize\ttfamily Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classWebServer}{Web\+Server}} in an idle state. 
+
+Constructs a \mbox{\hyperlink{classWebServer}{Web\+Server}} object with default values.
+
+The server starts in an idle state with no active request. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWebServer_ab028db6acd1106e0c97dd3a9c5df02a2}\label{classWebServer_ab028db6acd1106e0c97dd3a9c5df02a2}} 
+\index{WebServer@{WebServer}!assignRequest@{assignRequest}}
+\index{assignRequest@{assignRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{assignRequest()}{assignRequest()}}
+{\footnotesize\ttfamily void Web\+Server\+::assign\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRequest}{Request}}}]{req }\end{DoxyParamCaption})}
+
+
+
+Assigns a request to the server for processing. 
+
+Assigns a new request to the web server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The \mbox{\hyperlink{structRequest}{Request}} to assign.\\
+\hline
+\end{DoxyParams}
+Sets the current request, initializes the time remaining, and marks the server as running.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The \mbox{\hyperlink{structRequest}{Request}} object to be processed by the server. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWebServer_a16f30473362bfc933f00824da9958df4}\label{classWebServer_a16f30473362bfc933f00824da9958df4}} 
+\index{WebServer@{WebServer}!getCurrRequest@{getCurrRequest}}
+\index{getCurrRequest@{getCurrRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{getCurrRequest()}{getCurrRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequest}{Request}} Web\+Server\+::get\+Curr\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current request being processed by the server. 
+
+Gets the current request assigned to the server.
+
+\begin{DoxyReturn}{Returns}
+The current \mbox{\hyperlink{structRequest}{Request}} assigned to the server.
+
+The current \mbox{\hyperlink{structRequest}{Request}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWebServer_a9111ed664a9aec764311ba275941c704}\label{classWebServer_a9111ed664a9aec764311ba275941c704}} 
+\index{WebServer@{WebServer}!getProcessedRequestCount@{getProcessedRequestCount}}
+\index{getProcessedRequestCount@{getProcessedRequestCount}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{getProcessedRequestCount()}{getProcessedRequestCount()}}
+{\footnotesize\ttfamily int Web\+Server\+::get\+Processed\+Request\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the total number of requests processed by this server. 
+
+\begin{DoxyReturn}{Returns}
+The count of processed requests.
+
+The number of processed requests. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWebServer_af715d38be06f480d0432f86b260123ea}\label{classWebServer_af715d38be06f480d0432f86b260123ea}} 
+\index{WebServer@{WebServer}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily bool Web\+Server\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the server is currently processing a request. 
+
+\begin{DoxyReturn}{Returns}
+True if the server is running (processing a request), false otherwise.
+
+True if the server is running, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWebServer_aa70cfd8749f4aee55c60e09a5f9211f7}\label{classWebServer_aa70cfd8749f4aee55c60e09a5f9211f7}} 
+\index{WebServer@{WebServer}!tick@{tick}}
+\index{tick@{tick}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Web\+Server\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Advances the server by one clock cycle. 
+
+Decrements the remaining processing time. Marks the server as idle when complete.
+
+Decrements the time remaining on the current request. If the request is completed, the server becomes idle and increments its processed count. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{WebServer_8h}{Web\+Server.\+h}}\item 
+src/\mbox{\hyperlink{WebServer_8cpp}{Web\+Server.\+cpp}}\end{DoxyCompactItemize}

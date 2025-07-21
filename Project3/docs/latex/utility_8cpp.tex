@@ -1,0 +1,66 @@
+\hypertarget{utility_8cpp}{}\doxysection{src/utility.cpp File Reference}
+\label{utility_8cpp}\index{src/utility.cpp@{src/utility.cpp}}
+
+
+Contains utility functions for generating random IP addresses and requests.  
+
+
+{\ttfamily \#include \char`\"{}../headers/utility.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for utility.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{utility_8cpp_a0262883cd1482b5e76591b8333bd481d}{generate\+Random\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random IPv4 address as a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structRequest}{Request}} \mbox{\hyperlink{utility_8cpp_a60e973013d16b72b311665dbb9419fe1}{generate\+Random\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random \mbox{\hyperlink{structRequest}{Request}} object with random IP addresses and processing time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains utility functions for generating random IP addresses and requests. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{utility_8cpp_a0262883cd1482b5e76591b8333bd481d}\label{utility_8cpp_a0262883cd1482b5e76591b8333bd481d}} 
+\index{utility.cpp@{utility.cpp}!generateRandomIP@{generateRandomIP}}
+\index{generateRandomIP@{generateRandomIP}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomIP()}{generateRandomIP()}}
+{\footnotesize\ttfamily std\+::string generate\+Random\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random IPv4 address as a string. 
+
+Generates a random IPv4 address in string format.
+
+The IP address is in the format \char`\"{}\+X.\+X.\+X.\+X\char`\"{}, where each X is a random integer between 0 and 255.
+
+\begin{DoxyReturn}{Returns}
+A randomly generated IPv4 address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utility_8cpp_a60e973013d16b72b311665dbb9419fe1}\label{utility_8cpp_a60e973013d16b72b311665dbb9419fe1}} 
+\index{utility.cpp@{utility.cpp}!generateRandomRequest@{generateRandomRequest}}
+\index{generateRandomRequest@{generateRandomRequest}!utility.cpp@{utility.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomRequest()}{generateRandomRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequest}{Request}} generate\+Random\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random \mbox{\hyperlink{structRequest}{Request}} object with random IP addresses and processing time. 
+
+Generates a random web request with random IPs and processing time.
+
+
+\begin{DoxyItemize}
+\item Generates random inbound and outbound IP addresses.
+\item Sets the request time to a random value between 10 and 19 (inclusive).
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+A randomly generated \mbox{\hyperlink{structRequest}{Request}} object. 
+\end{DoxyReturn}

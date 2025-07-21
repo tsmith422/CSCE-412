@@ -1,0 +1,25 @@
+\hypertarget{LoadBalancer_8h}{}\doxysection{headers/\+Load\+Balancer.h File Reference}
+\label{LoadBalancer_8h}\index{headers/LoadBalancer.h@{headers/LoadBalancer.h}}
+
+
+Declares the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class responsible for managing web servers and requests.  
+
+
+{\ttfamily \#include \char`\"{}Web\+Server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Request\+Queue.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for Load\+Balancer.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}
+\begin{DoxyCompactList}\small\item\em Simulates a load balancer that distributes requests to multiple web servers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declares the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class responsible for managing web servers and requests. 
+

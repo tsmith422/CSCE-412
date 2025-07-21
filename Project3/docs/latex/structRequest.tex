@@ -1,0 +1,60 @@
+\hypertarget{structRequest}{}\doxysection{Request Struct Reference}
+\label{structRequest}\index{Request@{Request}}
+
+
+Represents a web request with input/output IP addresses and processing time.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRequest_a42a5e43bc25ec48dc412268fa4f653b8}{Request}} (std\+::string \mbox{\hyperlink{structRequest_a9331de2ccac6bca9a37616d103db6568}{ip\+\_\+in}}, std\+::string \mbox{\hyperlink{structRequest_a789e85de4e06e293c519fa6ed14539f3}{ip\+\_\+out}}, int \mbox{\hyperlink{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{structRequest}{Request}} with specified IP addresses and processing time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structRequest_a9331de2ccac6bca9a37616d103db6568}\label{structRequest_a9331de2ccac6bca9a37616d103db6568}} 
+std\+::string \mbox{\hyperlink{structRequest_a9331de2ccac6bca9a37616d103db6568}{ip\+\_\+in}}
+\begin{DoxyCompactList}\small\item\em The IP address of the requester. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structRequest_a789e85de4e06e293c519fa6ed14539f3}\label{structRequest_a789e85de4e06e293c519fa6ed14539f3}} 
+std\+::string \mbox{\hyperlink{structRequest_a789e85de4e06e293c519fa6ed14539f3}{ip\+\_\+out}}
+\begin{DoxyCompactList}\small\item\em The destination IP address for the response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}\label{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}} 
+int \mbox{\hyperlink{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}}
+\begin{DoxyCompactList}\small\item\em The amount of time required to process the request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a web request with input/output IP addresses and processing time. 
+
+The \mbox{\hyperlink{structRequest}{Request}} struct holds the information needed by the load balancer and web servers to process a request in the simulation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structRequest_a42a5e43bc25ec48dc412268fa4f653b8}\label{structRequest_a42a5e43bc25ec48dc412268fa4f653b8}} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}\item[{std\+::string}]{ip\+\_\+in,  }\item[{std\+::string}]{ip\+\_\+out,  }\item[{int}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{structRequest}{Request}} with specified IP addresses and processing time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip\+\_\+in} & The input IP address. \\
+\hline
+{\em ip\+\_\+out} & The output IP address. \\
+\hline
+{\em time} & The time required to process the request. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Request_8h}{Request.\+h}}\end{DoxyCompactItemize}
