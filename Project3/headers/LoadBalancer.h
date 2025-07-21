@@ -8,11 +8,18 @@
 class LoadBalancer
 {
 public:
-    LoadBalancer();
-    void distributeLoad();
+    LoadBalancer(int num_servers);
+    ~LoadBalancer();
+
+    void addRequest(Request request);
+    void assignRequests();
+    void tick();
+    void simulate(int total_cycles, int request_chance);
+    int getQueueSize();
+    int getServerCount();
 
 private:
-    std::vector<WebServer> servers;
+    std::vector<WebServer *> servers;
     RequestQueue requestQueue;
     int time;
 };

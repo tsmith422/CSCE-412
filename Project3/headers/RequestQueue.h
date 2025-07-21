@@ -10,7 +10,9 @@ public:
     RequestQueue();
     void enqueue(Request request);
     Request dequeue();
+    Request front();
     bool isEmpty();
+    int size();
 
 private:
     std::queue<Request> q;

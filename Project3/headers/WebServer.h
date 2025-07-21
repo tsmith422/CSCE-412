@@ -10,6 +10,7 @@ public:
     bool isRunning();
     void assignRequest(Request request);
     void tick();
+    Request getCurrRequest();
 
 private:
     bool running;
