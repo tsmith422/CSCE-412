@@ -18,6 +18,6 @@ Request generateRandomRequest()
 {
     std::string ip_in = generateRandomIP();
     std::string ip_out = generateRandomIP();
-    int time = (rand() % 10) + 1;
+    int time = (rand() % 10) + 10;
     return Request(ip_in, ip_out, time);
 }

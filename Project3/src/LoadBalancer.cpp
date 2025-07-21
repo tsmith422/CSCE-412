@@ -1,6 +1,7 @@
 #include "../headers/LoadBalancer.h"
 #include "../headers/utility.h"
 #include <iostream>
+using namespace std;
 
 LoadBalancer::LoadBalancer(int num_servers) : time(0)
 {
@@ -53,14 +54,15 @@ void LoadBalancer::simulate(int total_cycles, int new_request_chance)
         if ((rand() % 100) < new_request_chance)
         {
             addRequest(generateRandomRequest());
+            // cout << "New request added at cycle " << cycle << endl;
         }
 
-        if (cycle % 1000 == 0)
+        if (cycle % 500 == 0)
         {
-            std::cout << "Cycle: " << cycle
-                      << " | Queue Size: " << getQueueSize()
-                      << " | Active Servers: " << getServerCount()
-                      << std::endl;
+            cout << "Cycle: " << cycle
+                 << " | Queue Size: " << getQueueSize()
+                 << " | Active Servers: " << getServerCount()
+                 << endl;
         }
     }
 }
