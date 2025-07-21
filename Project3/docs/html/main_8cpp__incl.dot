@@ -9,7 +9,7 @@ digraph "src/main.cpp"
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="../headers/LoadBalancer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LoadBalancer_8h.html",tooltip="Declares the LoadBalancer class responsible for managing web servers and requests."];
+  Node4 [label="../headers/LoadBalancer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LoadBalancer_8h.html",tooltip="Defines the LoadBalancer class which manages a queue of requests and a pool of web servers."];
   Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="WebServer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$WebServer_8h.html",tooltip="Declares the WebServer class that simulates processing web requests."];
   Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
